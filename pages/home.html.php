@@ -4,8 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="format-detection" content="telephone=no">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
         <title>Home | Coast to Coast Communications Inc.</title>
         <meta name="description" content="We are a privately owned company, founded in 2004, specializing in underground fiber optic installation.">
         <meta name="keywords" content="Fiber, Optic, Installation, Underground">
