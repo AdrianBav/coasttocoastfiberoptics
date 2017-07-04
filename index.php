@@ -33,9 +33,8 @@
             exit;
         }
 
-        // Message sent sucessfully
-        echo 'Thank you for contacting me!';
-        exit;
+        // Message sent sucessfully,
+        // Continue with controller
     }
 
 
