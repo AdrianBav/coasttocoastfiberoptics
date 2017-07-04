@@ -72,10 +72,6 @@
                                 <a href="#" data-type="submit" class="btn">Send</a>
                                 <a href="#" data-type="reset" class="btn">Clear</a>
                             </div>
-                            <div style="display: none;">
-                                <input type="text" name="spam_check" value="">
-                                <input type="hidden" name="form_id" value="contact-form">
-                            </div>
                         </form>
                     </div>
                 </div>
