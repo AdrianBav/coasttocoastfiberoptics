@@ -33,8 +33,9 @@
             exit;
         }
 
-        // Message sent sucessfully,
-        // Continue with controller
+        // Message sent sucessfully, return to home page
+        header('Location: /') ;
+        exit;
     }
 
 
