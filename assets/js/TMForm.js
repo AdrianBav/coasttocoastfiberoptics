@@ -122,7 +122,6 @@
                             ,email:getValue($('label.email input'))
                             ,phone:getValue($('label.phone input'))
                             ,message:getValue($('label.message textarea'))
-                            ,owner_email:opt.ownerEmail||'#'
                             ,stripHTML:opt.stripHTML
                         }
                         ,success: function(e){

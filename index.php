@@ -21,37 +21,26 @@
         // Validate Message
         if (! validate_message($guest_input, $validation_feedback))
         {
-            $result = array(
-                'message'    => $validation_feedback,
-                'sendstatus' => 0
-            );
-
-            echo json_encode($result);
+            echo $validation_feedback;
             exit;
         }
 
         // Send message
         if (! send_contact_message($guest_input))
         {
-            $result = array(
-                'message'    => 'Sorry, something is wrong.',
-                'sendstatus' => 0
-            );
-
-            echo json_encode($result);
+            echo 'Sorry, something is wrong.';
             exit;
         }
 
         // Message sent sucessfully
-        $result = array(
-            'message'    => 'Thank you for contacting me!',
-            'sendstatus' => 1
-        );
-
-        echo json_encode($result);
+        echo 'Thank you for contacting me!';
         exit;
     }
 
+
+    /*!
+     * Main Controller
+     */
 
     // App Routes
     $routes = array(
