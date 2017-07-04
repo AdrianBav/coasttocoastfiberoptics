@@ -34,7 +34,7 @@
         }
 
         // Message sent sucessfully, return to home page
-        header('Location: http://www.coasttocoastfiberoptics.com/') ;
+        header('Location: http://coasttocoastfiberoptics.com/');
         exit;
     }
 
