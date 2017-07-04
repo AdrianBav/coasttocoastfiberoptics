@@ -11,7 +11,7 @@
                     ,invalidClass:'invalid'
                     ,successClass:'success'
                     ,onceVerifiedClass:'once-verified'
-                    ,mailHandlerURL:'bat/MailHandler.php'
+                    ,mailHandlerURL:'index.php'
                     ,successShowDelay:'4000'
                     ,stripHTML:true
                 },opt)
@@ -114,8 +114,6 @@
                 $('[data-constraints]',form).trigger('validate.form')
 
                 if(!$('label.'+opt.invalidClass+',label.'+opt.emptyClass,form).length){
-                    form[0].submit();
-                    /*
                     $.ajax({
                         type:"POST"
                         ,url:opt.mailHandlerURL
@@ -123,8 +121,6 @@
                             name:getValue($('label.name input'))
                             ,email:getValue($('label.email input'))
                             ,phone:getValue($('label.phone input'))
-                            ,fax:getValue($('label.fax input'))
-                            ,state:getValue($('label.state input'))
                             ,message:getValue($('label.message textarea'))
                             ,owner_email:opt.ownerEmail||'#'
                             ,stripHTML:opt.stripHTML
@@ -138,7 +134,6 @@
                             },opt.successShowDelay)
                         }
                     })
-                    */
                 }
                 return false
             }
