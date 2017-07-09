@@ -85,8 +85,7 @@
      */
     function send_contact_message(&$guest_input)
     {
-        // TODO - $to = 'Coast to Coast Communications <coast_to_coast_2004@yahoo.com>';
-        $to = 'Adrian Bavister <adrian.bavister@gmail.com>';
+        $to = 'Coast to Coast Communications <coast_to_coast_2004@yahoo.com>';
         $subject = 'Website contact form';
         $message = '';
         $headers = array();
