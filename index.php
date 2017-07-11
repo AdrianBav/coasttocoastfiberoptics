@@ -7,8 +7,8 @@
      * Handle Submitted Contact Form
      */
 
-    if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']))
-    {
+    if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])) {
+
         $guest_input = array(
             'name'    => $_POST['name'],
             'email'   => $_POST['email'],
@@ -53,6 +53,11 @@
     // Get the requested route
     $uri = trim($_SERVER['REQUEST_URI'], '/');
 
+    // Handle undefined routes
+    if (! array_key_exists($uri, $routes)) {
+        http_response_code(404);
+        exit;
+    }
 
     // Load the view
     require $routes[$uri];
