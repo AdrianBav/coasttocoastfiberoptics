@@ -55,8 +55,7 @@
 
     // Handle undefined routes
     if (! array_key_exists($uri, $routes)) {
-        http_response_code(404);
-        exit;
+        $uri = '';
     }
 
     // Load the view
