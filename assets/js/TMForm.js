@@ -108,7 +108,7 @@
             }
 
             function getValue(el){
-                return el.val()||false
+                return el.val()
             }
 
             function formSubmit(){
