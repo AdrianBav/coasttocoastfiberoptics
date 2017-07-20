@@ -935,3 +935,23 @@ footer .link:hover {
   }
 }
 /*Core variables and mixins*/
+
+/* Contact form feedback */
+form #feedback-holder {
+  display: none;
+  color: #ffffff;
+  background-color: #66c14d;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 420px;
+}
+form.error #feedback-holder {
+  background-color: #f74f42;
+}
+form #feedback-holder p {
+  padding: 0;
+}
+
+form.feedback #feedback-holder {
+  display: block;
+}

@@ -9,7 +9,8 @@
                     okClass:'ok'
                     ,emptyClass:'empty'
                     ,invalidClass:'invalid'
-                    ,successClass:'success'
+                    ,feedbackClass:'feedback'
+                    ,errorClass:'error'
                     ,onceVerifiedClass:'once-verified'
                     ,mailHandlerURL:'index.php'
                     ,successShowDelay:'4000'
@@ -117,20 +118,28 @@
                     $.ajax({
                         type:"POST"
                         ,url:opt.mailHandlerURL
+                        ,dataType:'json'
                         ,data:{
                             name:getValue($('label.name input'))
                             ,email:getValue($('label.email input'))
                             ,phone:getValue($('label.phone input'))
                             ,message:getValue($('label.message textarea'))
-                            ,stripHTML:opt.stripHTML
                         }
-                        ,success: function(e){
-                            form.addClass(opt.successClass)
+                        ,success: function(feedback){
+                            $( '#feedback-holder p' ).text( feedback.message );
+                            // On negative feedback add error class
+                            if ( feedback.status == 0 ) {
+                                form.addClass(opt.errorClass);
+                            } else {
+                                form.removeClass(opt.errorClass);
+                            }
+                            // Show feedback for length of delay
+                            form.addClass(opt.feedbackClass);
                             setTimeout(function(){
                                 form
-                                .removeClass(opt.successClass)
+                                .removeClass(opt.feedbackClass)
                                 .trigger('reset')
-                            },opt.successShowDelay)
+                            },opt.successShowDelay);
                         }
                     })
                 }

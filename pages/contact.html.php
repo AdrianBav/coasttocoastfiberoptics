@@ -47,31 +47,41 @@
 
                     <div class="grid_6">
                         <h2>Send us a Message</h2>
+
                         <form method="post" id="contact-form">
+                            <div id="feedback-holder">
+                                <p>No Feedback</p>
+                            </div>
+
                             <label class="name">
                                 <input type="text" name="name" placeholder="Name*:" data-constraints="@Required @JustLetters">
                                 <span class="empty-message">*This field is required.</span>
                                 <span class="error-message">*This is not a valid name.</span>
                             </label>
+
                             <label class="email">
                                 <input type="text" name="email" placeholder="Email*:" data-constraints="@Required @Email">
                                 <span class="empty-message">*This field is required.</span>
                                 <span class="error-message">*This is not a valid email.</span>
                             </label>
+
                             <label class="phone">
                                 <input type="text" name="phone" placeholder="Phone:" data-constraints="@JustNumbers">
                                 <span class="empty-message">*This field is required.</span>
                                 <span class="error-message">*This is not a valid phone.</span>
                             </label>
+
                             <label class="message">
                                 <textarea placeholder="Message*:" name="message" data-constraints="@Required @Length(min=20,max=999999)"></textarea>
                                 <span class="empty-message">*This field is required.</span>
                                 <span class="error-message">*The message is too short.</span>
                             </label>
+
                             <div class="form_buttons">
                                 <a href="#" data-type="submit" class="btn">Send</a>
                                 <a href="#" data-type="reset" class="btn">Clear</a>
                             </div>
+
                         </form>
                     </div>
                 </div>
